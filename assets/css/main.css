@@ -1,0 +1,89 @@
+/* variables */
+:root {
+  --main-font: "PT Sans Caption", sans-serif;
+  --second-font: "Righteous", sans-serif;
+  --third-font: "Pacifico", cursive;
+  --bg-color: #f7ecde;
+  --h1-color: #352e28;
+  --h1-hover-bg-color: #fec260;
+  --heading-color: #212529;
+  --submit-bg-color: #d1512d;
+  --submit-hover-bg-color: #a03315;
+  --visit-bg-color: #9eb23b;
+  --visit-hover-bg-color: #8a9e23;
+  --delete-bg-color: #eb1d36;
+  --delete-hover-bg-color: #d30820;
+}
+::selection {
+  background-color: var(--h1-hover-bg-color);
+  color: var(--h1-color);
+}
+body {
+  background-color: var(--bg-color);
+  font-family: var(--main-font);
+}
+.main-heading {
+  font-family: var(--third-font);
+  font-size: 50px;
+  margin-bottom: 60px;
+  width: fit-content;
+  position: relative;
+}
+.main-heading::before {
+  content: "";
+  position: absolute;
+  background-color: var(--h1-hover-bg-color);
+  width: 100%;
+  height: 35%;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.4s;
+}
+.main-heading:hover::before {
+  height: 65%;
+}
+main .book-mark-inputs {
+  border-block: 2px dotted black;
+}
+main .book-mark-inputs h2 {
+  font-family: var(--second-font);
+  font-size: 25px;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.inputs label {
+  color: var(--heading-color);
+}
+.form-control:focus {
+  color: var(--heading-color);
+  border-color: #d99c39;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+.btn-submit {
+  background-color: var(--submit-bg-color);
+}
+.btn-submit:hover {
+  background-color: var(--submit-hover-bg-color);
+}
+
+tr th,
+tr td {
+  padding: 8px;
+}
+.visit-btn {
+  background-color: var(--visit-bg-color);
+  padding: 6px 8px 6px 12px;
+}
+.visit-btn:hover {
+  background-color: var(--visit-hover-bg-color);
+}
+.delete-btn {
+  background-color: var(--delete-bg-color);
+  padding: 6px 8px 6px 12px;
+}
+.delete-btn:hover {
+  background-color: var(--delete-hover-bg-color);
+}

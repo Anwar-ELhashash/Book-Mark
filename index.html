@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="assets/images/bookmark.png" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="container py-5">
+        <h1 class="main-heading text-center mx-auto">Bookmarker</h1>
+        <!-- inputs bookmarks -->
+        <div class="book-mark-inputs py-4 px-2">
+          <h2 class="text-center mb-4">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+          <div class="inputs">
+            <div class="mb-3">
+              <label for="siteName" class="form-label fw-bold">
+                <i class="fa-solid fa-book-bookmark me-2"></i>
+                Site Name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="siteName"
+                placeholder="Bookmark Name"
+                autocomplete="off"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="siteUrl" class="form-label fw-bold">
+                <i class="fa-solid fa-link me-2 mt-2"></i>
+                Site URL</label
+              >
+              <input
+                type="url"
+                class="form-control"
+                id="siteUrl"
+                placeholder="Website URL"
+                autocomplete="off"
+              />
+            </div>
+            <div class="d-flex justify-content-center">
+              <button
+                type="button"
+                id="submitBtn"
+                class="btn text-white mt-2 btn-submit px-5 fw-medium py-2"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- table bookmarks -->
+        <table class="w-100 text-center bg-white mt-4 text-capitalize rounded-3">
+          <thead class="border-bottom border-light-subtle">
+            <tr>
+              <th>index</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </main>
+    <!-- JS Files -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
